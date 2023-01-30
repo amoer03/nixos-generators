@@ -1,7 +1,8 @@
-{ modulesPath, ... }:
+{ ... }:
 {
+  disabledModules = [ "virtualisation/proxmox-image.nix" ];
   imports = [
-    "${toString modulesPath}/virtualisation/proxmox-image.nix"
+    ../virtualisation/proxmox-image.nix
   ];
   formatAttr = "VMA";
 }
